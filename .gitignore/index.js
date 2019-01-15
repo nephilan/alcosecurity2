@@ -125,4 +125,4 @@ if (message.content === prefix + "help") {
     }
 });
 
-client.login("NTIxNzU2ODk2NDQ5OTIxMDI0.DxZvOQ.pp2ydBaJFuN-Yesz8M7qGPUygbc")
+client.login(process.env.TOKEN)
