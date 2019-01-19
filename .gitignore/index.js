@@ -134,4 +134,4 @@ if (message.content === prefix + "help") {
     }
 });
 
-client.login(procces.env.TOKEN)
+client.login(process.env.TOKEN)
