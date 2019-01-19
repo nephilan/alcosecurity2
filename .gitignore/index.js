@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
- 
+
 var prefix = "a.";
  
 
@@ -96,14 +96,23 @@ client.on("message", message => {
     message.channel.send(`Server name: **${message.guild.name}**\nTotal members: **${message.guild.members.size}**`)
   }
 
-  if (message.content === "slt"){
+  if (message.content === "Slt"){
       message.reply("hey");
       console.log("commande slt effectué");
   }
 
-  if (message.content === prefix + "status") {
-          message.delete(message.author);
+  if (message === prefix + "embed") {
+      var embed = new Discord.RichEmbed()
+          .setTitle("EMBED")
+          .setDescription("ceci est un embed")
+          .addField("a.help","page d'aide", true)
+          .addField("Embed01","Embed 01 ! :) Ajoutez moi sur votre discord (https://discordapp.com/api/oauth2/authorize?client_id=521756896449921024&permissions=2146958839&redirect_uri=https%3A%2F%2Fdiscordapp.com%2Fapi%2Foauth2%2Fauthorize%3Fclient_id%3D521756896449921024%26permissions%3D2146958839%26scope%3Dbot&scope=bot)", true)
+          .setColor("0xFF8000")
+          .setFooter("Bon moment parmis nous :)!")
+      message.channel.sendEmbed(embed);
   }
+
+
 });
 
 client.on('message', message => {
@@ -125,4 +134,4 @@ if (message.content === prefix + "help") {
     }
 });
 
-client.login(process.env.TOKEN)
+client.login("procces.env.TOKEN")
