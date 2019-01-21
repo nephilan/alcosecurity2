@@ -69,7 +69,7 @@ setTimeout(game10, 3000)
 
 function game10(){
 
-    client.user.setActivity("toujours en developement")    
+    client.user.setActivity("「⚠️」toujours en developement")    
     setTimeout(game1, 3000)
 }
 
