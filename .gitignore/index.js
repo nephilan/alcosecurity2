@@ -101,10 +101,6 @@ client.on("message", message => {
       console.log("commande slt effectué");
   }
  
- if (message.content === "ntm"){
-     message.reply("fdp je vais te dox");
-     console.log("commande ntm effectuer")
-
   if (message === prefix + "embed") {
       var embed = new Discord.RichEmbed()
           .setTitle("EMBED")
