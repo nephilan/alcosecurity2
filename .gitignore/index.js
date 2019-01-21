@@ -3,7 +3,6 @@ const client = new Discord.Client();
 
 var prefix = "a.";
  
-
 function game1(){
 
   client.user.setActivity("「👮」Protège " + client.guilds.size + "s. Anti-Raid ®『🚫』 ");
@@ -69,7 +68,7 @@ setTimeout(game10, 3000)
 
 function game10(){
 
-    client.user.setActivity("「⚠️」toujours en developement")    
+    client.user.setActivity("toujours en developement")    
     setTimeout(game1, 3000)
 }
 
@@ -100,18 +99,15 @@ client.on("message", message => {
       message.reply("hey");
       console.log("commande slt effectué");
   }
- 
-  if (message === prefix + "embed") {
-      var embed = new Discord.RichEmbed()
-          .setTitle("EMBED")
-          .setDescription("ceci est un embed")
-          .addField("a.help","page d'aide", true)
-          .addField("Embed01","Embed 01 ! :) Ajoutez moi sur votre discord (https://discordapp.com/api/oauth2/authorize?client_id=521756896449921024&permissions=2146958839&redirect_uri=https%3A%2F%2Fdiscordapp.com%2Fapi%2Foauth2%2Fauthorize%3Fclient_id%3D521756896449921024%26permissions%3D2146958839%26scope%3Dbot&scope=bot)", true)
-          .setColor("0xFF8000")
-          .setFooter("Bon moment parmis nous :)!")
-      message.channel.sendEmbed(embed);
-  }
 
+  if (message.content === prefix + "embed"){
+    var embed = new Discord.RichEmbed()
+    .setTitle("Cliquez ici pour ajouter le bot")
+    .setDescription(":tools:Voici le lien d'invitation pour ajouter mon bot dans votre serveur:tools:")
+    .setURL("https://discordapp.com/oauth2/authorize?client_id=534074921488351234&scope=bot&permissions=2146958847")
+    .setColor('RANDOM')
+message.channel.send(embed)
+}
 
 });
 
@@ -134,4 +130,4 @@ if (message.content === prefix + "help") {
     }
 });
 
-client.login(process.env.TOKEN);
+client.login(processus.env.TOKEN)
